@@ -6,9 +6,20 @@
 
 - Clone to your package directory `git clone https://github.com/crazyfactory/php-package-boilerplate my_awesome_package`
 - Remove `src/Example.php` and `tests/unit/ExampleTest.php`
-- Change `composer.json` name and any other config settings required for your package
+- Change `composer.json`:
+  - `name`
+  - `autoload` and `autoload-dev` namespacing
+  - Any other config settings required for your package
 - Run `composer install`
-- Change your remote URL: `git remote set-url origin https://github.com/crazyfactory/REPOSITORY.git`
+- Switch to your new remote
+```bash
+rm -rf .git`
+git init
+git add .
+git commit -m "feat(All): Start"
+git remote add origin <github-uri>
+git push -u --force origin master
+```
 
 ## Scripts
 

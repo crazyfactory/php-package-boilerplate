@@ -1,23 +1,25 @@
 {
     "name": "CrazyFactory/boilerplate",
-    "description": "boilerplate package",
+    "description": "Change to your description.",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "crazyfactory\\boilerplate\\": [
-                "src/"
-            ]
+            "CrazyFactory\\Boilerplate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CrazyFactory\\Boilerplate\\Tests\\": "tests/"
         }
     },
     "require": {
         "php": "^7.2"
     },
     "require-dev": {
-        "codeception/codeception": "*",
-        "squizlabs/php_codesniffer": "*",
-        "crazyfactory/sniffs": "*",
-        "apigen/apigen": "*",
-        "wikimedia/composer-merge-plugin": "*"
+        "codeception/codeception": "^2.4",
+        "apigen/apigen": "^4.1",
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "crazyfactory/sniffs": "^1.2"
     },
     "extra": {
         "merge-plugin": {
@@ -41,16 +43,10 @@
         }
     ],
     "scripts": {
-        "post-install-cmd": "cp .code_quality/* .git/hooks/ && codecept bootstrap",
-        "hook:validate-commit-msg": "",
-        "hook:pre-push": "composer test",
-        "hook:pre-commit": "composer lint",
-        "document": "apigen generate -s ./src -d ./docs",
-        "codecept": "codecept",
+        "docs": "apigen generate src --destination docs",
         "test": "codecept run",
-        "test:coverage": "codecept run --coverage",
-        "test:unit": "codecept run",
-        "lint": "phpcs --standard=PSR2 src",
-        "lint:fix": "phpcbf --standard=PSR2 src"
+        "test:coverage": "codecept run unit --coverage --coverage-xml --coverage-html",
+        "lint": "phpcs --standard=phpcs.xml",
+        "lint:fix": "phpcbf --standard=phpcs.xml"
     }
 }

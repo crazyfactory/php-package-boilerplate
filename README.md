@@ -2,54 +2,30 @@
 
 [![Build Status](https://travis-ci.org/CrazyFactory/boilerplate.svg)](https://travis-ci.org/CrazyFactory/boilerplate)
 
+## Startup Steps
 
+- Clone to your package directory `git clone https://github.com/crazyfactory/php-package-boilerplate my_awesome_package`
+- Remove `src/Example.php` and `tests/unit/ExampleTest.php`
+- Change `composer.json` name and any other config settings required for your package
+- Run `composer install`
+- Change your remote URL: `git remote set-url origin https://github.com/crazyfactory/REPOSITORY.git`
 
-## Installation
-To use this class in your project, just add or update the **composer.json** file with the following entries
+## Scripts
 
-```
-{
-    ...
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/CrazyFactory/boilerplate"
-        }
-    ],
-    ...
-}
+Run Tests
+
+```bash
+composer test
 ```
 
-## Usage
-```php
-    ...
-    // explain how someone can use this project
-    ...
+Lint
+
+```bash
+composer lint
 ```
 
-## Running tests
-This packages ships with a dev-dependency for the Codeception testing framework (http://codeception.com/). To run tests:
-- get dependencies ready:
-    ```$ composer install```
-- run ALL tests:
-    ```$ ./vendor/codeception/codeception/codecept run```
+Generate Docs
 
-- run tests and with code coverage and xml & html output
-
-    ```// found in products-autodescriptor/tests/_output/coverage/dashboard.html```
-
-    ```$ composer test --coverage --coverage-xml --coverage-html```
-
-
-
-## Features by versions
-### 0.1.0
-- features
-
-## Credits
-
-### Authors:
-- me@example.com
-
-### Contact us: 
-dev@example.com
+```bash
+composer docs
+```

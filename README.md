@@ -34,9 +34,3 @@ Lint
 ```bash
 composer lint
 ```
-
-Generate Docs
-
-```bash
-composer docs
-```

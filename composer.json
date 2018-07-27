@@ -19,6 +19,7 @@
         "codeception/codeception": "^2.4",
         "wikimedia/composer-merge-plugin": "^1.4",
         "crazyfactory/sniffs": "^1.2"
+        "brainmaestro/composer-git-hooks": "^2.4"
     },
     "extra": {
         "merge-plugin": {
@@ -32,6 +33,11 @@
             "merge-extra": false,
             "merge-extra-deep": false,
             "merge-scripts": true
+        },
+       "hooks": {
+            "pre-commit": "composer lint",
+            "commit-msg": "",
+            "pre-push": "composer test"
         }
     },
     "license": "GPL",
@@ -42,6 +48,8 @@
         }
     ],
     "scripts": {
+        "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+        "post-update-cmd": "vendor/bin/cghooks update",
         "test": "codecept run",
         "test:coverage": "codecept run unit --coverage --coverage-xml --coverage-html",
         "lint": "phpcs --standard=phpcs.xml",

@@ -1,5 +1,5 @@
 {
-    "name": "CrazyFactory/boilerplate",
+    "name": "crazyfactory/package-boilerplate",
     "description": "Change to your description.",
     "type": "library",
     "autoload": {
@@ -17,7 +17,6 @@
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
-        "apigen/apigen": "^4.1",
         "wikimedia/composer-merge-plugin": "^1.4",
         "crazyfactory/sniffs": "^1.2"
     },
@@ -43,7 +42,6 @@
         }
     ],
     "scripts": {
-        "docs": "apigen generate src --destination docs",
         "test": "codecept run",
         "test:coverage": "codecept run unit --coverage --coverage-xml --coverage-html",
         "lint": "phpcs --standard=phpcs.xml",

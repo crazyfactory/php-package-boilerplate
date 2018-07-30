@@ -1,8 +1,7 @@
-## PHP Package Boilerplate
+## PHP Package Boilerplate [![Build Status](https://travis-ci.com/crazyfactory/php-package-boilerplate.svg)](https://travis-ci.com/crazyfactory/php-package-boilerplate)
 
 Use this project as a starting point for PHP packages.
 
-[![Build Status](https://travis-ci.com/crazyfactory/php-package-boilerplate.svg)](https://travis-ci.com/crazyfactory/php-package-boilerplate)
 
 ## Startup Steps
 

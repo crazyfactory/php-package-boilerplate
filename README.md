@@ -13,9 +13,17 @@ Use this project as a starting point for PHP packages.
 - Adjust `composer.json`:
   - `name`: _NEW_PACKAGE_NAME_
   - `autoload` and `autoload-dev` _NEW_PACKAGE_NAMESPACE_
-
+  - `phpunit` or `codeception` for testing? Set dependencies here
+  
+- Adjust `README.md`:
+  - set package name
+  - set Travis CI badge
+  - add description what this project is about
+  - add Requirements (PHP version, composer, ...)
+  - add example usage
 - Run `composer install`
 - Switch to your new remote
+
 ```bash
 rm -rf .git`
 git init
@@ -24,6 +32,8 @@ git commit -m "feat(All): Start"
 git remote add origin <github-uri>
 git push -u --force origin master
 ```
+
+- check the repo _SETTINGS_ > _collaborators & teams_: **SuperAdmins** have _Admin_ rights, **Developers** have _Write_ access 
 
 ## Scripts
 

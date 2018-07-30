@@ -17,22 +17,8 @@
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "crazyfactory/sniffs": "^1.2"
-    },
-    "extra": {
-        "merge-plugin": {
-            "include": [
-                "composer.local.json"
-            ],
-            "recurse": true,
-            "replace": true,
-            "ignore-duplicates": false,
-            "merge-dev": true,
-            "merge-extra": false,
-            "merge-extra-deep": false,
-            "merge-scripts": true
-        }
+        "crazyfactory/sniffs": "^1.2",
+        "phpunit/phpunit": "7.0"
     },
     "license": "GPL",
     "authors": [

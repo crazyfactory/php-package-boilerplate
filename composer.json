@@ -36,7 +36,7 @@
     "scripts": {
         "test": "codecept run",
         "test:coverage": "codecept run unit --coverage --coverage-xml --coverage-html",
-        "lint": "phpcs --standard=phpcs.xml",
+        "lint": "phpcbf --standard=phpcs.xml",
         "lint:fix": "phpcbf --standard=phpcs.xml"
     }
 }

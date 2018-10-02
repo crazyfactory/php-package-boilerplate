@@ -25,7 +25,7 @@ Use this project as a starting point for PHP packages.
 - Switch to your new remote
 
 ```bash
-rm -rf .git`
+rm -rf .git
 git init
 git add .
 git commit -m "feat(All): Start"

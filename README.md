@@ -53,3 +53,8 @@ Lint
 ```bash
 composer lint
 ```
+
+Run linting with auto-fix
+```
+composer lint:fix
+```

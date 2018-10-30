@@ -43,6 +43,11 @@ Run Tests
 composer test
 ```
 
+Run Tests with code coverage
+```
+composer test:coverage
+```
+
 Lint
 
 ```bash
